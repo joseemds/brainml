@@ -20,8 +20,7 @@ let rec interp tape current_cell =
         current_cell
     | Print ->
         let char = Uchar.of_int @@ tape.(current_cell) |> Uchar.to_char in
-        Format.printf "curret_cell value: %d @." tape.(current_cell);
-        Format.printf "Char: %c @." char;
+        Format.printf "%c%!" char;
         current_cell
     | Input -> read_int ()
     | Loop l -> loop l
