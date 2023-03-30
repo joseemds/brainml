@@ -30,6 +30,4 @@ let rec interp tape current_cell =
   | [] -> current_cell
   | node :: nodes ->
       let current_cell = inner node in
-      interp  tape current_cell nodes
-
-
+      interp tape current_cell nodes
